@@ -1,0 +1,20 @@
+fun main(){
+  val messsage = Message()
+  message.bye()
+}
+interface GoodByeOne{
+ fun bye(){
+    println("Thanks for checking out my code")
+ }
+}
+interface GoodByeTwo{
+  fun bye{
+    println("See you later")
+  }
+}
+class Message : GoodByeOne,GoodByeTwo{
+  override fun bye{
+    super<GoodByeOne>.bye()
+    super<GoodByeTwo>.bye()
+  }
+}
